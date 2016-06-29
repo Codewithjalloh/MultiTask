@@ -9,6 +9,10 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var activeLabel: UILabel!
+    @IBOutlet weak var notificationLabel: UILabel!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
