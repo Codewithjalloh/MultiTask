@@ -17,6 +17,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateInterface:", name: UIApplicationWillEnterForegroundNotification, object: nil)
+        
+    }
+    
+    func updateInterface(notification: NSNotification) {
+        notificationLabel.text = "Back to background with notifications"
     }
 
     override func didReceiveMemoryWarning() {
